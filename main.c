@@ -1,24 +1,52 @@
 #include "simple_shell.h"
+
+
 /**
- * main - Entry Point to Shell
- * Return: Always 0 on success
+ * main - Entry point of the simple shell program
+ * @argc: Number of arguments int the entered command
+ * @argv: Array of pointers to the arguments
+ *
+ * Return: 0 (Always Success)
  */
-int main(void)
+
+int main(int argc, char **argv)
 {
-	char *buffer, *line;
-	list_t *env_head;
-	int ret_val;
+	char *my_command;
 
-	/* create a buffer to store input */
-	buffer = malloc(sizeof(char) * BUFF_SIZE);
-	if (buffer == NULL)
-		return (1);
-	line = NULL;
-	env_head = array_to_list(environ);
-	/* call cmd_line_loop */
-	ret_val = cmd_line_loop(buffer, line, &env_head);
+	init_shell();
 
-	free_list(env_head);
-	free(buffer);
-	return (ret_val);
+	do {
+		print_first_prompt();
+		my_command = read_command();
+
+		if (!my_command)
+		{
+			exit(EXIT_SUCCESS);
+		}
+
+		if (my_command[0] == '\0' || strcmp(my_command, "\n") == 0)
+		{
+			free(my_command);
+			continue;
+		}
+
+		if (strcmp(my_command, "exit\n") == 0)
+		{
+			free(my_command);
+			break;
+		}
+
+		struct scanner_s src;
+
+		src.buffer = my_command;
+		src.bufsize = strlen(my_command);
+		src.charpos = INIT_SRC_POS;
+
+		parse_and_execute(&src);
+
+		free(my_command);
+
+	} while (1);
+
+	exit(EXIT_SUCCESS);
 }
