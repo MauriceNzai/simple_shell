@@ -2,8 +2,8 @@
 
 /**
  * count_words - counts separate words in string
- * @str: pointer to s
- * @delim: delimiter
+ * @str: pointer to string to count words from
+ * @delim: delimiter(what separates words
  * Return: number of words
  */
 int count_words(char *str, char delim)
@@ -24,7 +24,7 @@ int count_words(char *str, char delim)
 
 /**
  * _wrdlen - returns the lenght of a word
- * @s: pointer to s
+ * @s: pointer to the word
  * @delim: delimiter
  * Return: lenght
  */
@@ -38,7 +38,7 @@ int _wrdlen(char *s, char delim)
 }
 
 /**
- * strtow - splits a string into words
+ * strtow - splits a string into separate words
  * @str: string to break
  * @delim: delimiter
  * Return: array of strings(words)
