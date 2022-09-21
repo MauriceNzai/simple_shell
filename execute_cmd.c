@@ -3,7 +3,7 @@
 
 /**
  * path_dirs_array - makes array of pointers for all dirs in the PATH
- * @env_head: pointer to environ list
+ * @env_head: pointer to environment list
  * Return: Array of pointers
  */
 char **path_dirs_array(list_t **env_head)
@@ -34,7 +34,7 @@ char **path_dirs_array(list_t **env_head)
 
 /**
  * cmd_in_path - finds command in the PATH
- * @str: pointer to first string in input line (command)
+ * @str: pointer to first word in input line (command)
  * @env_head: pointer to environ list
  * Description: steps
  * tokenize path directories
@@ -88,7 +88,7 @@ char *cmd_in_path(char *str, list_t **env_head)
 }
 
 /**
- * run_command - runs the command typed into shell prompt
+ * run_command - executs command input by user into shell prompt
  * @line_tok: tokenized input line
  * @env_head: pointer to environ list
  * Return: Always 0 on success, 1 on error
