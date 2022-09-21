@@ -26,8 +26,8 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * _strchr - locates character in string
- * @str: pointer to a string
+ * _strchr - locates a character in string
+ * @str: pointer to a string to find char
  * @c: char to find
  * Return: pointer to the matched character or NULL
  */
@@ -44,7 +44,7 @@ char *_strchr(char *str, char c)
 }
 
 /**
- * len_to_char - finds string length to passed char
+ * len_to_char - finds string length to passed char to
  * @str: pointer to a string
  * @c: char to find
  * Return: length of string before char or 0 if not found
