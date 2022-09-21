@@ -1,7 +1,7 @@
 #include "simple_shell.h"
 
 /**
- * _putchar - writes the character c to stdout
+ * _putchar - writes the character to the stdout
  * @c: The character to print
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
@@ -23,7 +23,7 @@ void _strprint(char *str)
 
 /**
  * print_array - Prints an array of strings
- * @array: The array to print
+ * @array: Pointer to the array to print
  * Return: nothing
  */
 void print_array(char **array)
@@ -44,7 +44,7 @@ void print_array(char **array)
 
 /**
  * print_list - prints all the elements of a list_t list
- * @h: linked list
+ * @h: Pointer to the linked list whose elements are to be printed
  * Return: number of elements
  */
 size_t print_list(list_t *h)
