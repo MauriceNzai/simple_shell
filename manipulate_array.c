@@ -1,8 +1,8 @@
 #include "simple_shell.h"
 
 /**
- * arr_size - finds size of array
- * @arr: array of pointers to strings
+ * arr_size - finds size of an array
+ * @arr: pointer to array of pointers to strings
  * Return: size of the array
  */
 int arr_size(char **arr)
@@ -19,7 +19,7 @@ int arr_size(char **arr)
 
 /**
  * array_to_list - builds a linked list of array of pointers
- * @array: array of pointers to strings
+ * @array: pointer to array of pointers to strings
  * Return: pointer to head
  */
 list_t *array_to_list(char **array)
@@ -68,7 +68,7 @@ char **list_to_array(list_t **head)
 
 /**
  * free_array - frees a 2D array
- * @array: array to free
+ * @array: pointer to array to free
  * Return: none
  */
 void free_array(char **array)
