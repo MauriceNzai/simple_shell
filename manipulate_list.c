@@ -20,7 +20,7 @@ size_t list_len(list_t *h)
 
 /**
  * add_node - adds a new node at the beginning of a list_t list
- * @head: first node in the list
+ * @head: first node in the list (head of the lst)
  * @str: second node in the list
  * Return: the address of the new element, or NULL if it failed
  */
@@ -41,7 +41,7 @@ list_t *add_node(list_t **head, char *str)
 }
 
 /**
- * add_node_end - check the code for Holberton School students.
+ * add_node_end - Adds a node at the end of the list.
  * @head: pointer to first node in linked list
  * @str: data to be copied to string field of the node
  * Return: adress of new element, or NULL if fail
@@ -80,7 +80,7 @@ list_t *add_node_end(list_t **head, char *str)
 
 /**
  * free_list - frees list_t
- * @head: linked list to free
+ * @head: head of the linked list to be free'd
  * Return: Nothing
  */
 void free_list(list_t *head)
@@ -99,7 +99,7 @@ void free_list(list_t *head)
 }
 
 /**
- * get_node - Returns the node with str
+ * get_node - Returns the node matching with the given str
  * @head: pointer to first node in list
  * @str: string to search from
  * Return: n-th node, NULL if node not found
