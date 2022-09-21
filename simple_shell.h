@@ -50,7 +50,7 @@ typedef struct list_s
 extern char **environ;
 
 
-/* manipulate_list.c */
+/* Functions in the file manipulate_list.c */
 size_t list_len(list_t *h);
 list_t *add_node(list_t **head, char *str);
 list_t *add_node_end(list_t **head, char *str);
@@ -58,14 +58,14 @@ void free_list(list_t *head);
 list_t *get_node(list_t **head, char *str);
 
 
-/* print.c */
+/* Functions in the file print.c */
 int _putchar(char c);
 void _strprint(char *str);
 void print_array(char **array);
 size_t print_list(list_t *h);
 
 
-/* manipulate_str.c */
+/* Functions in the file manipulate_str.c */
 int _strlen(char *s);
 int _strncmp(char *s1, char *s2, int n);
 char *_strdup(char *str);
@@ -73,27 +73,27 @@ char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
 
 
-/* manipulate_str1 */
+/* Functions in the file manipulate_str1 */
 int _strcmp(char *s1, char *s2);
 char *_strchr(char *str, char c);
 int len_to_char(char *str, char c);
 int _atoi(char *s);
 
 
-/* _strtok.c */
+/* Functions in the file _strtok.c */
 int count_words(char *str, char delim);
 int _wrdlen(char *s, char delim);
 char **strtow(char *str, char delim);
 
 
-/* manipulate_array.c */
+/* Functions in the file manipulate_array.c */
 int arr_size(char **arr);
 list_t *array_to_list(char **array);
 char **list_to_array(list_t **head);
 void free_array(char **array);
 
 
-/* new_env.c */
+/* Functions in the file new_env.c */
 char *_getenv(char *name, list_t **env_head);
 int _setenv(char *name, char *value, list_t **env_head);
 int _unsetenv(char *name, list_t **env_head);
@@ -101,7 +101,7 @@ int delete_node(list_t **head, char *string);
 char *var_str(char *name, char *value);
 
 
-/* _getline.c */
+/* Functions in the file _getline.c */
 int _getline(char *input, int size);
 int exit_shell(char **line_tok);
 void clear_buffer(char *buffer);
@@ -109,17 +109,17 @@ char *mem_cpy(char *dest, char *src, int n);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 
-/* cmd_line_loop.c */
+/* Functions in the file cmd_line_loop.c */
 int cmd_line_loop(char *buffer, char *line, list_t **env_head);
 
 
-/* run_command */
+/* Functions in the file run_command */
 char **path_dirs_array(list_t **env_head);
 char *cmd_in_path(char *str, list_t **env_head);
 int run_command(char **line, list_t **env_head);
 
 
-/* builtins.c */
+/* Functions in the file builtins.c */
 int built_ins(char **line, list_t **env_head);
 int exit_bi(char **line);
 int print_env(char **line, list_t **env_head);
