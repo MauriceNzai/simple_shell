@@ -2,7 +2,7 @@
 
 /**
  * _strlen - returns the lenght of a string
- * @s: pointer to s
+ * @s: pointer to the string
  * Return: 0 on success
  */
 int _strlen(char *s)
@@ -83,8 +83,8 @@ char *_strcat(char *dest, char *src)
 }
 
 /**
- * _strdup - returns a pointer to a newly allocated space in memory, which
- * contains a copy of the string given as a parameter
+ * _strdup - returns a pointer to a newly allocated space in memory,
+ * containing a copy of the string given as a parameter
  * @str: string to copy
  * Return: pointer to new string or NULL if str = NULL
  */
