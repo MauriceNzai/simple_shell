@@ -2,9 +2,9 @@
 
 /**
  * _getenv - gets an environment variable. (without using getenv)
- * @name: environment variable name
- * @env_head: pointer to environ list
- * Return: pointer to a string with that env variable or NULL if not found
+ * @name: The name of the environment variable
+ * @env_head: pointer to environmen list head
+ * Return: pointer to a string with that env variable name or NULL if not found
  */
 char *_getenv(char *name, list_t **env_head)
 {
@@ -32,7 +32,7 @@ char *_getenv(char *name, list_t **env_head)
  *	         environment, then its value is changed to value
  * @name: name of the variable
  * @value: value of the variable
- * @env_head: pointer to environ list
+ * @env_head: pointer to environment list head
  * Return: pointer to head of the list or NULL if it failed
  */
 int _setenv(char *name, char *value, list_t **env_head)
@@ -72,7 +72,7 @@ int _setenv(char *name, char *value, list_t **env_head)
 /**
  * _unsetenv - deletes the variable name from env.
  * @name:name of the environment variable
- * @env_head: pointer to environ list
+ * @env_head: pointer to environment list head
  * Return: Always 0 on success, or 1 on error
  **/
 int _unsetenv(char *name, list_t **env_head)
