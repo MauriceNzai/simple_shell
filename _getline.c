@@ -1,6 +1,6 @@
 #include "simple_shell.h"
 /**
- * _getline - prints "$ ", for user to input command, prints it on next line
+ * _getline - prints the prompt "$ ", for user to input command, prints it on next line
  * @input: pointer to buffer to store input
  * @size: size of a buffer
  * Return: chars read or -1 if _realloc failed
@@ -31,8 +31,8 @@ int _getline(char *input, int size)
 }
 
 /**
- * exit_shell - 'exit' exit shell
- * @line_tok: pointer to a tokenized input line
+ * exit_shell - 'exit' exits shell
+ * @line_tok: pointer to a tokenized user input
  * Return: 1 if want to exit, 0 otherwise
  */
 int exit_shell(char **line_tok)
@@ -49,7 +49,7 @@ int exit_shell(char **line_tok)
 }
 
 /**
- * clear_buffer - sets all the chars in buffer to 0
+ * clear_buffer - Resets buffer (sets all the chars in buffer to 0)
  * @buffer: buffer to reset
  * Return: nothing
  */
@@ -62,10 +62,10 @@ void clear_buffer(char *buffer)
 }
 
 /**
- * mem_cpy - copies memory area
+ * mem_cpy - copies the memory area
  * @dest: memory area to copy to
  * @src: memory area copying from
- * @n: how many bytes to copy
+ * @n: The number of bytes to copy
  * Return: Pointer to dest
  */
 char *mem_cpy(char *dest, char *src, int n)
