@@ -1,6 +1,6 @@
 #include "simple_shell.h"
 /**
- * _getline - prints the prompt "$ ", for user to input command, prints it on next line
+ * _getline - prints the prompt "$ ", for user to input command
  * @input: pointer to buffer to store input
  * @size: size of a buffer
  * Return: chars read or -1 if _realloc failed
