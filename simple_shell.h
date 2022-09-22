@@ -1,5 +1,5 @@
-#ifndef SHELL_H
-#define SHELL_H
+#ifndef SIMPLE_SHELL_H_
+#define SIMPLE_SHELL_H_
 
 #include <unistd.h>
 #include <stdio.h>
@@ -127,4 +127,4 @@ int set_env(char **line, list_t **env_head);
 int unset_env(char **line, list_t **env_head);
 
 
-#endif
+#endif /* _SIMPLE_SHELL_ */
